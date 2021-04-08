@@ -9,6 +9,6 @@
     </settings>
     <!--设置实体类的别名-->
     <typeAliases>
-
+        <typeAlias type="com.clm.pojo.User" alias="User" />
     </typeAliases>
 </configuration>
