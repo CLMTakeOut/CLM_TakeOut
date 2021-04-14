@@ -4,9 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 /**
- * @author: Administrator
- * @date: 2021/4/14 11:04
- * @description:购物车
+ * author: Administrator
+ * date: 2021/4/14 11:04
+ * escription:购物车
  */
 
 @Data

@@ -3,8 +3,14 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.clm.mapper.UserMapper">
-    <!--结果集映射-->
-    <select id="findUser" resultType="User">
+    <resultMap id="UserMap" type="User">
+        <result column="user_id"  property="id"/>
+        <result column="user_name"  property="userName"/>
+        <result column="user_pwd"  property="userPwd"/>
+        <result column="user_portrait"  property="portrait"/>
+    </resultMap>
+<!--    结果集映射-->
+    <select id="getUsers"  resultMap="UserMap">
         select * from user;
     </select>
 </mapper>

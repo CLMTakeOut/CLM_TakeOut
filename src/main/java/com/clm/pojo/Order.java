@@ -4,9 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 /**
- * @author: Administrator
- * @date: 2021/4/14 10:57
- * @description:订单
+ * author: Administrator
+ * date: 2021/4/14 10:57
+ * description:订单
  */
 
 @Data

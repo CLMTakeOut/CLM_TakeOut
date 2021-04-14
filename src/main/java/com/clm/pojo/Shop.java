@@ -4,9 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 /**
- * @author: Administrator
- * @date: 2021/4/14 11:00
- * @description:店铺
+ * author: Administrator
+ * date: 2021/4/14 11:00
+ * description:店铺
  */
 
 @Data
@@ -18,5 +18,4 @@ public class Shop {
     private String shopContacts;    //联系人
     private String Telephone;       //联系电话
     private byte[] shopLogo;        //店铺logo
-
 }
