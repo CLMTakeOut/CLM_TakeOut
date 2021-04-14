@@ -25,4 +25,9 @@ public class UserServiceImpl implements UserService{
         User user = mapper.findUser(uid);
         return user;
     }
+
+    // 用户登录
+    public Boolean userLogin(){
+        return null;
+    }
 }
