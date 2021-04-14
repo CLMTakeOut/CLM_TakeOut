@@ -5,8 +5,9 @@ import lombok.Data;
 
 /**
  * date: 2021/3/25 8:43
- * 说明:
+ * 说明:用户实体类
  */
+
 @Data
 @AllArgsConstructor
 public class User {

@@ -5,6 +5,6 @@
 <mapper namespace="com.clm.mapper.UserMapper">
     <!--结果集映射-->
     <select id="findUser" resultType="User">
-        select * from ;
+        select * from user;
     </select>
 </mapper>

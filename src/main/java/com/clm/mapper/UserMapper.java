@@ -1,5 +1,6 @@
 package com.clm.mapper;
 
+import com.clm.pojo.User;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -14,5 +15,7 @@ public interface UserMapper {
     // 删除用户
     boolean deleteUser();
     // 查询用户
-    boolean findUser();
+    User findUser(Integer uid);
+
+    //
 }
