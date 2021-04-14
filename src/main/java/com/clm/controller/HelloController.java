@@ -24,11 +24,11 @@ public class HelloController {
         return  "Hello,World";
     }
 
-    @RequestMapping("/getUser/{id}")
-    public String getUserInfo(@PathVariable Integer id){
-        // 调用service方法
-        User user = service.findUserByID(id);
-        String s = JSON.toJSONString(user);
-        return s;
-    }
+//    @RequestMapping("/getUser/{id}")
+//    public String getUserInfo(@PathVariable Integer id){
+//        // 调用service方法
+//        User user = service.findUserByID(id);
+//        String s = JSON.toJSONString(user);
+//        return s;
+//    }
 }
