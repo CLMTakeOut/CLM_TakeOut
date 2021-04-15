@@ -15,5 +15,4 @@ public class Collection {
     private Integer collectionId;
     private Integer userId;
     private Integer goodsId;
-    private Integer shopId;
 }

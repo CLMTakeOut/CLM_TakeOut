@@ -16,4 +16,5 @@ public class Announcement {
     private Integer shopId;
     private Integer userId;
     private byte[] picture;     //图片
+    private String notice;      //详情
 }
