@@ -1,4 +1,4 @@
-package com.clm.service;
+package com.clm.service.user;
 
 import com.clm.mapper.UserMapper;
 import com.clm.pojo.User;
@@ -9,21 +9,21 @@ import java.util.List;
 @Service
 public class UserServiceImpl implements UserService{
     @Autowired
-    UserMapper mapper;
-    public void setMapper(UserMapper mapper) {
-        this.mapper = mapper;
+    UserMapper userMapper;
+    public void setUserMapperMapper(UserMapper mapper) {
+        this.userMapper = mapper;
     }
 
     @Override
     public List<User> getUserList() {
-        List<User> users = mapper.getUsers();
+        List<User> users = userMapper.getUsers();
         return users;
     }
 
 
     @Override
     public Boolean findUserByTelephone(String telephone) {
-        User user = mapper.getUserByTelephone(telephone);
+        User user = userMapper.getUserByTelephone(telephone);
         if (user != null){
             return true;
         }else {
@@ -33,7 +33,7 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public User useLogin(String tel,String pwd) {
-        User user = mapper.getUserByTelephoneAndPwd(tel, pwd);
+        User user = userMapper.getUserByTelephoneAndPwd(tel, pwd);
         if (user != null) {
             return user;
         }else {

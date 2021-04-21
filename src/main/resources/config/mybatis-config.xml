@@ -10,5 +10,6 @@
 <!--    设置实体类的别名-->
     <typeAliases>
         <typeAlias type="com.clm.pojo.User" alias="User" />
+        <typeAlias type="com.clm.pojo.Admin" alias="Admin" />
     </typeAliases>
 </configuration>

@@ -1,4 +1,4 @@
-package com.clm.service;
+package com.clm.service.user;
 
 import com.clm.pojo.User;
 

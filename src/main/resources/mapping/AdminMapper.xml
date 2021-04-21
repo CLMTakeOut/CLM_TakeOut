@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.clm.mapper.AdminMapper">
+    <resultMap id="AdminMap" type="Admin">
+        <result column="admin_id" property="adminId"/>
+        <result column="shop_id" property="shopId"/>
+        <result column="admin_name" property="adminName"/>
+        <result column="admin_pwd" property="adminPwd"/>
+    </resultMap>
+
+<!--    结果集映射  -->
+    <select id="getAdmins" resultMap="AdminMap">
+        select * from admin;
+    </select>
+
+<!--    根据管理员id查找-->
+    <select id="getAdminById" resultMap="AdminMap">
+        select * from admin where admin_id = #{adminId}
+    </select>
+
+<!--    根据管理员用户名查找-->
+    <select id="getAdminByName" resultMap="AdminMap">
+        select * from admin where admin_name = #{adminName}
+    </select>
+</mapper>

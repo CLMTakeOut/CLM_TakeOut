@@ -4,7 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.clm.pojo.Message;
 import com.clm.pojo.User;
-import com.clm.service.UserService;
+import com.clm.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -17,6 +17,8 @@ import java.util.List;
  * date: 2021/3/24 10:52
  * 说明:
  */
+
+
 @RestController
 @RequestMapping("/user")
 public class UserController {
@@ -36,14 +38,12 @@ public class UserController {
     }
 
     @RequestMapping("/findTelephone/{tel}")
-    public String findUserByTelephone(@PathVariable("tel") String telephone) {
+    public Boolean findUserByTelephone(@PathVariable("tel") String telephone) {
         Boolean flag = service.findUserByTelephone(telephone);
         if(flag){
-            Message message = new Message(200,"用户存在",telephone);
-            return JSON.toJSONString(message);
+            return true;
         }else{
-            Message message = new Message(200,"用户不存在",null);
-            return JSON.toJSONString(message);
+            return false;
         }
     }
 
