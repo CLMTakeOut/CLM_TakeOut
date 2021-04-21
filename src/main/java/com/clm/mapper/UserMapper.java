@@ -20,4 +20,7 @@ public interface UserMapper {
 
     // 匹配手机号和密码正确的用户
     User getUserByTelephoneAndPwd(@Param("telephone")String telephone,@Param("pwd")String pwd);
+
+    // 添加用户
+    Boolean insertUser(User user);
 }

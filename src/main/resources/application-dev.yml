@@ -6,7 +6,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/clm?useSSL=false&serverTimezone=UTC
     username: root
-    password: 123456
+    password: 13621498341kb
     driver-class-name: com.mysql.jdbc.Driver
   #上传文件大小
   servlet:

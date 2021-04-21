@@ -13,13 +13,21 @@
     <select id="getUsers"  resultMap="UserMap">
         select * from user;
     </select>
+<!--    根据用户id查找-->
     <select id="getUserById" resultMap="UserMap">
         select * from user where user_id = #{id};
     </select>
+<!--    根据用户手机号查找-->
     <select id="getUserByTelephone" resultMap="UserMap">
         select * from user where telephone = #{telephone};
     </select>
+<!--    匹配手机号和密码-->
     <select id="getUserByTelephoneAndPwd" resultMap="UserMap">
         select * from user where telephone = #{telephone} and pwd = #{pwd};
     </select>
+<!--    添加用户、手机号、用户名、-->
+    <insert id="insertUser" parameterType="User">
+        insert into user(telephone,user_name,user_pwd,sex)
+        values(#{id},#{telephone},#{userName},#{userPwd},#{sex});
+    </insert>
 </mapper>
