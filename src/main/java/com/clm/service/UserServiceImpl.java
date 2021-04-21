@@ -13,9 +13,31 @@ public class UserServiceImpl implements UserService{
     public void setMapper(UserMapper mapper) {
         this.mapper = mapper;
     }
+
     @Override
     public List<User> getUserList() {
         List<User> users = mapper.getUsers();
         return users;
+    }
+
+
+    @Override
+    public Boolean findUserByTelephone(String telephone) {
+        User user = mapper.getUserByTelephone(telephone);
+        if (user != null){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    @Override
+    public User useLogin(String tel,String pwd) {
+        User user = mapper.getUserByTelephoneAndPwd(tel, pwd);
+        if (user != null) {
+            return user;
+        }else {
+            return null;
+        }
     }
 }

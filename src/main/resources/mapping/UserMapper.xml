@@ -13,4 +13,13 @@
     <select id="getUsers"  resultMap="UserMap">
         select * from user;
     </select>
+    <select id="getUserById" resultMap="UserMap">
+        select * from user where user_id = #{id};
+    </select>
+    <select id="getUserByTelephone" resultMap="UserMap">
+        select * from user where telephone = #{telephone};
+    </select>
+    <select id="getUserByTelephoneAndPwd" resultMap="UserMap">
+        select * from user where telephone = #{telephone} and pwd = #{pwd};
+    </select>
 </mapper>
