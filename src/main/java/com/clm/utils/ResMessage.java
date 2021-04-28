@@ -1,5 +1,6 @@
-package com.clm.pojo;
+package com.clm.utils;
 
+import com.alibaba.fastjson.JSONObject;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -7,8 +8,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Message {
+public class ResMessage {
     Integer status; // 状态码
     String msg; // 信息
-    String data; // 具体数据
+    JSONObject data; // 具体数据
 }

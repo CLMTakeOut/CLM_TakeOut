@@ -2,7 +2,6 @@ package com.clm.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.clm.pojo.Admin;
-import com.clm.pojo.Message;
 import com.clm.service.admin.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;

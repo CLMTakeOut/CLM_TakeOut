@@ -19,5 +19,5 @@ public interface AdminMapper {
     Admin getAdminByName(String adminName);
 
     //管理员登录（匹配用户名、密码输入正确）
-    Admin getAdminByIdAndName(@Param(Integer ))
+//    Admin getAdminByIdAndName(@Param(Integer ))
 }

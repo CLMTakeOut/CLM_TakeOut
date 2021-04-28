@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 8848
 
 #数据库相关配置
 spring:

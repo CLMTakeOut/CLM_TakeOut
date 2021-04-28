@@ -6,7 +6,7 @@
     <resultMap id="UserMap" type="User">
         <result column="user_id"  property="id"/>
         <result column="user_name"  property="userName"/>
-        <result column="user_pwd"  property="userPwd"/>
+        <result column="user_pwd" property="userPwd"/>
         <result column="user_portrait"  property="portrait"/>
     </resultMap>
 <!--    结果集映射-->
@@ -22,8 +22,8 @@
         select * from user where telephone = #{telephone};
     </select>
 <!--    匹配手机号和密码-->
-    <select id="getUserByTelephoneAndPwd" resultMap="UserMap">
-        select * from user where telephone = #{telephone} and pwd = #{pwd};
+    <select id="getUserByTelephoneAndPwd" resultType="map">
+        select user_id,user_name,sex,telephone,balance,integral,user_portrait from user where telephone = #{telephone} and user_pwd = #{pwd};
     </select>
 <!--    添加用户、手机号、用户名、-->
     <insert id="insertUser" parameterType="User">

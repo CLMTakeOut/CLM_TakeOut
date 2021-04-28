@@ -2,9 +2,9 @@ package com.clm.mapper;
 
 import com.clm.pojo.User;
 import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 
+import java.util.HashMap;
 import java.util.List;
 
 @Repository
@@ -19,7 +19,7 @@ public interface UserMapper {
     User getUserByTelephone(String telephone);
 
     // 匹配手机号和密码正确的用户
-    User getUserByTelephoneAndPwd(@Param("telephone")String telephone,@Param("pwd")String pwd);
+    HashMap<String,Object> getUserByTelephoneAndPwd(@Param("telephone")String telephone, @Param("pwd")String pwd);
 
     // 添加用户
     Boolean insertUser(User user);
